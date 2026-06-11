@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Projects & Output
+projects/
+concat_list.txt
+final_video.mp4
+narration.mp3
+subtitles.srt
+scene_*.png
+scene_*.mp3
+thumbnail.png
+metadata.json
+
+# Web Frontend
+web/node_modules/
+web/dist/
+web/dist-ssr/
+web/*.local
+web/.env.local
+web/.env.development.local
+web/.env.test.local
+web/.env.production.local
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Test files
+tests/test_flux*.png
+tests/test_default*.png
+tests/test_prompt*.png
+tests/test_no_steps*.png
