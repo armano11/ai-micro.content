@@ -3,8 +3,9 @@ import asyncio
 import httpx
 import base64
 import sys
+from app.config.settings import settings
 
-NVIDIA_KEY = "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"
+NVIDIA_KEY = settings.nvidia_api_key
 
 async def test_llm():
     print("=== Testing NVIDIA LLM ===", flush=True)
