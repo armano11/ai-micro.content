@@ -1,0 +1,118 @@
+PLATFORMS = {
+    "linkedin": {
+        "max_chars": 3000,
+        "max_first_line": 210,
+        "tone": "professional, insightful, data-driven",
+        "hashtag_limit": 5,
+        "supports_thread": False,
+        "best_practices": [
+            "Start with a bold claim or statistic",
+            "Use line breaks for readability",
+            "End with a question to drive comments",
+            "Avoid jargon, keep it conversational-professional",
+            "Use 'I' statements for personal experience",
+        ],
+        "avoid": ["excessive hashtags", "clickbait", "all caps"],
+        "hook_style": "professional insight or surprising data",
+        "cta_style": "question or call to share experience",
+        "structure": "hook (1-2 lines) → body (short paragraphs) → CTA question",
+    },
+    "twitter": {
+        "max_chars": 280,
+        "max_first_line": 200,
+        "tone": "punchy, direct, witty",
+        "hashtag_limit": 3,
+        "supports_thread": True,
+        "best_practices": [
+            "One idea per tweet",
+            "Use numbers and lists",
+            "Thread format: hook → value → CTA",
+            "Keep under 250 chars for engagement",
+            "End threads with a summary tweet",
+        ],
+        "avoid": ["long paragraphs", "passive voice", "complex words"],
+        "hook_style": "controversial take or hot take",
+        "cta_style": "retweet/follow ask",
+        "structure": "short, punchy, one-idea-per-line",
+    },
+    "instagram": {
+        "max_chars": 2200,
+        "max_first_line": 150,
+        "tone": "casual, visual, relatable",
+        "hashtag_limit": 30,
+        "supports_thread": False,
+        "best_practices": [
+            "Front-load the hook (first line matters most)",
+            "Use line breaks and emojis for scannability",
+            "End with a clear CTA (save, share, comment)",
+            "Include 20-30 relevant hashtags",
+            "Tell a micro-story or share a tip",
+        ],
+        "avoid": ["walls of text", "too many links", "boring opening"],
+        "hook_style": "relatable story or bold statement",
+        "cta_style": "save this, share with someone who needs this",
+        "structure": "emoji hook → value lines → CTA → hashtags",
+    },
+    "facebook": {
+        "max_chars": 63206,
+        "max_first_line": 400,
+        "tone": "conversational, community-oriented, warm",
+        "hashtag_limit": 3,
+        "supports_thread": False,
+        "best_practices": [
+            "Ask questions to spark discussion",
+            "Use storytelling and personal anecdotes",
+            "Keep paragraphs short (1-2 sentences)",
+            "Encourage comments and shares",
+            "Use emojis naturally (not excessively)",
+        ],
+        "avoid": ["overly salesy language", "walls of text", "external links in post"],
+        "hook_style": "question or relatable scenario",
+        "cta_style": "comment prompt or share request",
+        "structure": "question/hook → story/value → discussion prompt",
+    },
+    "email": {
+        "max_chars": 5000,
+        "max_first_line": 300,
+        "tone": "warm, personal, value-first",
+        "hashtag_limit": 0,
+        "supports_thread": False,
+        "best_practices": [
+            "Personalize with recipient's name",
+            "Subject line under 50 characters",
+            "Preview text should complement subject",
+            "One clear CTA per email",
+            "Use short paragraphs and bullet points",
+        ],
+        "avoid": ["spam words", "ALL CAPS", "too many links"],
+        "hook_style": "personal address or pain point",
+        "cta_style": "single clear action button",
+        "structure": "personal greeting → hook → value → single CTA → sign-off",
+    },
+    "ad": {
+        "max_chars": 300,
+        "max_first_line": 150,
+        "tone": "urgent, benefit-focused, action-driven",
+        "hashtag_limit": 0,
+        "supports_thread": False,
+        "best_practices": [
+            "Lead with the benefit, not the feature",
+            "Use power words: free, now, proven, instant",
+            "Create urgency (limited time, scarcity)",
+            "One clear CTA",
+            "Keep it short — every word must earn its place",
+        ],
+        "avoid": ["vague claims", "passive voice", "long sentences"],
+        "hook_style": "pain point or desired outcome",
+        "cta_style": "direct action (Get, Start, Try, Download)",
+        "structure": "pain/hook → benefit → proof → CTA",
+    },
+}
+
+
+def get_platform_spec(platform: str) -> dict:
+    return PLATFORMS.get(platform, PLATFORMS["linkedin"])
+
+
+def get_all_platforms() -> list:
+    return list(PLATFORMS.keys())
